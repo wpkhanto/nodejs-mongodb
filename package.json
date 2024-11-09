@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "main": "app.js",
     "scripts": {
-        "start": "nodemon app.js",
+        "start": "nodemon server.js",
         "lint": "npx eslint . --fix",
         "format": "npx prettier --write .",
         "re-version": "node re-version.js"
