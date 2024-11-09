@@ -4,6 +4,8 @@
     "main": "app.js",
     "scripts": {
         "start": "nodemon server.js",
+        "start:dev": "nodemon server.js",
+        "start:prod": "NODE_ENV=production nodemon server.js",
         "lint": "npx eslint . --fix",
         "format": "npx prettier --write .",
         "re-version": "node re-version.js"
@@ -13,6 +15,7 @@
     "license": "ISC",
     "description": "Learning node, express and mongoDB",
     "dependencies": {
+        "dotenv": "^16.4.5",
         "express": "^4.21.1",
         "morgan": "^1.10.0",
         "semver": "^7.6.3"

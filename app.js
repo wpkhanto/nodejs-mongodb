@@ -7,7 +7,10 @@ const userRouter = require('./routes/userRoutes');
 const app = express();
 
 // 1) MIDDLEWARES
-app.use(morgan('dev')); // tiny or dev
+console.log(process.env.NODE_ENV);
+if (process.env.NODE_ENV === 'development') {
+    app.use(morgan('dev')); // tiny or dev
+}
 app.use(express.json());
 app.use(express.static(`${__dirname}/public`)); // middleware ทำให้เข้าถึงไฟล์ได้ ประกาศว่า folder public เป็น staic ไฟล์
 
